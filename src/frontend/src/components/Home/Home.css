@@ -1,0 +1,148 @@
+.home {
+    height: 100vh;
+    width: 100vw; 
+    margin: 0;
+    padding: 0;
+}
+
+.loader {
+    width: 100vw;
+    height: 100vh;
+    background:  #25294a;
+}
+
+.loader-clip {
+    position: absolute;
+    width: 100vw;
+    height: 50vh;
+    overflow: clip;
+}
+
+.clip-top {
+    top: 0;
+    clip-path: inset(0 0 0 0);
+    background: #202442;
+    height: 50vh;
+}
+
+.clip-bottom {
+    bottom: 0;
+    clip-path: inset(0 0 0 0);
+    background: #202442;
+    height: 50vh;
+}
+
+.clip-center {
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 33.3vh;
+    top: 33.3vh;
+    z-index: 1000;
+}
+
+.marquee {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200vw;
+    color: #ffffff;
+    mix-blend-mode: difference;
+    font-size: 12vw;
+}
+
+.marquee-container {
+    width: 100%;
+    padding-top: 0.2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.center {
+    color: #656777;
+}
+
+.loader {
+    animation: changeBackground 3s forwards;
+    animation-delay: 3s;
+    background: #202442;
+}
+
+@keyframes changeBackground {
+    to {
+        background: #25294a;
+    }
+}
+
+.clip-top, .clip-bottom {
+    animation: changeHeights 2s forwards;
+    height: 50vh;
+}
+
+@keyframes changeHeights {
+    to {
+        height: 33.3vh;
+    }
+}
+
+.marquee {
+    animation: moveTop 3.5s forwards;
+    top: -40%; 
+  }
+  
+  @keyframes moveTop {
+    to {
+      top: 50%;
+    }
+  }
+
+  .clip-top .marquee, .clip-bottom .marquee {
+    animation: moveLeft 5s forwards;
+    animation-delay: 1s;
+    left: 0; /* Start position */
+  }
+  
+  @keyframes moveLeft {
+    to {
+      top: 50%;
+      left: 100%;
+    }
+  }
+
+  .clip-center .marquee {
+    animation: moveLeftNegative 5s forwards;
+    animation-delay: 1s;
+    left: 150%; /* Start position */
+  }
+  
+  @keyframes moveLeftNegative {
+    to {
+      top: 50%;
+      left: 52.5%;
+    }
+  }
+.clip-top, .clip-bottom {
+    animation: changeHeight 2s forwards;
+    animation-delay: 6s;
+    height: 33.3vh; /* Start height */
+}
+
+@keyframes changeHeight {
+    to {
+        height: 0vh;
+    }
+}
+
+.marquee {
+    animation: fadeOut 2s forwards;
+    animation-delay: 6s;
+    opacity: 1;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
