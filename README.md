@@ -40,9 +40,9 @@ download the [OpenJDK 17](https://jdk.java.net/17/).
 
 ## Acknowledgements
 Give credit here.
-- This project was inspired by [Weaver](: https://wordwormdormdork.com/).
+- This project was inspired by [Weaver](https://wordwormdormdork.com).
 - This project was inspired by Bandung Institute of Technology.
-- This project was based on [Tucil3 Strategi Algoritma 2023-2024](C:/Users/ASUS/Downloads/Spesifikasi%20Tugas%20Kecil%203%20Stima%202023_2024.pdf).
+- This project was based on Tucil3 Strategi Algoritma 2023-2024.
 
 ## Contact
 Created by [@JasonFernandoo](https://github.com/JasonFernandoo) - feel free to contact me!

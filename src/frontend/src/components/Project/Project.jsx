@@ -187,7 +187,7 @@ const Project = () => {
               <p>Time: {executionTime.toFixed(4)} Seconds</p>
               <p>Node: {path? path.length : 0}</p>
               <p>Visited: {visitedWords}</p>
-              <p>Memory: {memoryUsage.toFixed(2)} KB</p>
+              <p>Memory: {(memoryUsage ? memoryUsage.toFixed(2) : 'N/A')} KB</p>
             </div>
           </div>
         </div>
